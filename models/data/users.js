@@ -1,6 +1,6 @@
-import 'dotenv/config.js'
-import '../../config/database.js'
-import User from '../User.js'
+import 'dotenv/config.js';
+import '../../config/database.js';
+import User from '../User.js';
 
 const users = [
     {
@@ -84,11 +84,6 @@ const users = [
       online: false
     }
   ];
-
-
-
-
-
 
 
 

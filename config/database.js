@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
-let url = process.env.URI_MONGO
 
+let url = process.env.URI_MONGO
 
 
 async function dataBaseConnection(){
     try {
       await mongoose.connect(process.env.URI_MONGO)
-       console.log("Base de datos conectada");
+       console.log("Database is connected");
     } catch (error) {
        console.log(error);
     }
