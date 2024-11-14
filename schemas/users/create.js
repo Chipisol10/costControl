@@ -12,13 +12,12 @@ const schema = joi.object({
         'string.email':'Must be a valid email'
     }),
     address:joi.string().required(),
-   phone: joi.string().pattern(/^\d{10}$/).required().messages({
-        'string.pattern.base': 'The phone must have exactly 10 digits'
-    }),
-    password: joi.string().required().min(8).pattern(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/).messages({
-        'string.min': 'Password must be at least 12 characters long',
-        'string.pattern.base': 'The password must include at least one letter, a number and a special character'
-    }),    
+    phone: joi.number().required(),
+        
+ 
+    password: joi.string().required(),
+       
+    
     online:joi.boolean().required(),
 })
 
