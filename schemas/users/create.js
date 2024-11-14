@@ -7,7 +7,10 @@ const schema = joi.object({
     }),
     email:joi.string().required(),
     address:joi.string().required(),
-    phone:joi.number().required(),
+    phone:joi.number().required().min(9).max(11).messages({
+        'number.min':'Minimos son 9 digitos',
+        'number.max':'Maximo son 11 digitos'
+    }),
     password:joi.string().required(),
     online:joi.boolean().required(),
 })
