@@ -2,8 +2,8 @@ import joi from "joi-oid";
 
 const schema = joi.object({
     name: joi.string().required().alphanum().messages({
-        'string.base':"Por favor solo ingresar letras",
-        'string.alphanum':'No uses caracteres Especiales'
+        'string.base':"Please only letters",
+        'string.alphanum':'Please do not use special characters'
     }),
     email:joi.string().required(),
     address:joi.string().required(),
