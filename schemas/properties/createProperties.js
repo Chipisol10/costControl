@@ -6,8 +6,13 @@ const schema = joi.object({
         'string.alphanum':'Please do not use special characters'
     }),
     type:joi.string().required(),
-    value:joi.number().required(),
-    user:joi.objectId().required()
+    value:joi.number().required().positive().message({
+        'number.base': 'The value must be a number', 
+        'number.positive': 'The value must be positive',
+    }),
+    user:joi.objectId().required().message({
+        'any.required': 'User ID is required',
+    })
 })
 
 export default schema
